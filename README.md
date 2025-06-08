@@ -338,6 +338,7 @@ Remember to always commit your local changes or stash them before pulling update
 - **`pnpm run start`**: Runs the built application locally using Wrangler Pages.
 - **`pnpm run preview`**: Builds and runs the production build locally.
 - **`pnpm test`**: Runs the test suite using Vitest.
+- *Tip*: ensure dependencies are installed with `pnpm install` so Vitest is available.
 - **`pnpm run typecheck`**: Runs TypeScript type checking.
 - **`pnpm run typegen`**: Generates TypeScript types using Wrangler.
 - **`pnpm run deploy`**: Deploys the project to Cloudflare Pages.

@@ -5,7 +5,12 @@
  * @link http://jedwatson.github.io/classnames
  */
 
-type ClassNamesArg = undefined | string | Record<string, boolean> | ClassNamesArg[];
+type ClassNamesArg =
+  | undefined
+  | string
+  | number
+  | Record<string, boolean>
+  | ClassNamesArg[];
 
 /**
  * A simple JavaScript utility for conditionally joining classNames together.
@@ -26,7 +31,7 @@ export function classNames(...args: ClassNamesArg[]): string {
 
 function parseValue(arg: ClassNamesArg) {
   if (typeof arg === 'string' || typeof arg === 'number') {
-    return arg;
+    return String(arg);
   }
 
   if (typeof arg !== 'object') {
